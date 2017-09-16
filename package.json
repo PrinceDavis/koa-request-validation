@@ -10,7 +10,8 @@
     "test:watch": "mocha **/*.spec.js -w",
     "cover": "nyc npm t",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov ./node_modules/.bin/codecov",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "precommit": "npm run cover && npm run check-coverage"
   },
   "repository": {
     "type": "git",
@@ -39,7 +40,7 @@
     "codecov": "2.3.0",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
-    "ghooks": "2.0.0",
+    "husky": "0.14.3",
     "mocha": "3.5.3",
     "nyc": "11.2.1",
     "semantic-release": "^7.0.2",
@@ -50,9 +51,6 @@
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
-    },
-    "ghooks": {
-      "pre-commit": "npm run test"
     }
   }
 }
