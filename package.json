@@ -1,10 +1,10 @@
 {
   "name": "koa-request-validation",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple, clean http requests validator for koajs application that is inspired by express validator and uses joi to make rules",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha **/*.spec.js -w"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,12 @@
   "homepage": "https://github.com/PrinceDavis/koa-request-validation#readme",
   "dependencies": {
     "joi": "11.0.1"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "mocha": "3.5.3",
+    "sinon": "3.2.1",
+    "sinon-chai": "2.13.0",
+    "winston": "2.3.1"
   }
 }
