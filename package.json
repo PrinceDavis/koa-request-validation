@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/PrinceDavis/koa-request-validation/issues"
   },
-  "homepage": "https://github.com/PrinceDavis/koa-request-validation#readme"
+  "homepage": "https://github.com/PrinceDavis/koa-request-validation#readme",
+  "dependencies": {
+    "joi": "11.0.1"
+  }
 }
