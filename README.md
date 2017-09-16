@@ -13,7 +13,7 @@ Object schema description language and validator for JavaScript objects.
 
 Looking for clean way to run validation against http request parameters, body, and query string is koajs?
 
-Koa-request-validation uses joi schema to validate ensure you are good to go
+Koa-request-validation uses joi schema to create rules that http requests can be validated against.
 
 ## Installation
 ```bash
