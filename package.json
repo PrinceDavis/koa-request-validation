@@ -1,14 +1,16 @@
 {
   "name": "koa-request-validation",
-  "version": "1.1.0",
+  "version": "0.0.0-development",
   "description": "A simple, clean http requests validator for koajs application that is inspired by express validator and uses joi to make rules",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha **/*.spec.js -w"
+    "commit": "git-cz",
+    "test": "mocha **/*.spec.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PrinceDavis/koa-request-validation.git"
+    "url": "https://github.com/PrinceDavis/koa-request-validation.git"
   },
   "keywords": [
     "koa",
@@ -30,9 +32,15 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
     "mocha": "3.5.3",
+    "semantic-release": "^7.0.2",
     "sinon": "3.2.1",
     "sinon-chai": "2.13.0",
     "winston": "2.3.1"
+  }, 
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
