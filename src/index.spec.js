@@ -47,6 +47,48 @@ describe('validator', async () => {
   })
 })
 
+describe('validateBody', () => {
+  const rule = joi.object().keys({
+    name: joi.string().required(),
+    age: joi.number().required()
+  })
+
+  it('should call validate function on joi object', async function () {
+    const validate = this.sandbox.spy(joi, 'validate')
+    await myValidator(context, () => {})
+    context.validateBody(rule)
+    expect(validate).to.be.calledOnce
+  })
+
+  it('should call validate function on joi object with 3 arguments', async function () {
+    const validate = this.sandbox.spy(joi, 'validate')
+    await myValidator(context, () => {})
+    context.validateBody(rule)
+    expect(validate.firstCall.args.length).to.be.equal(3)
+  })
+})
+
+describe('validateParams', () => {
+  const rule = joi.object().keys({
+    name: joi.string().required(),
+    age: joi.number().required()
+  })
+
+  it('should call validate function on joi object', async function () {
+    const validate = this.sandbox.spy(joi, 'validate')
+    await myValidator(context, () => {})
+    context.validateParams(rule)
+    expect(validate).to.be.calledOnce
+  })
+
+  it('should call validate function on joi object with 3 arguments', async function () {
+    const validate = this.sandbox.spy(joi, 'validate')
+    await myValidator(context, () => {})
+    context.validateParams(rule)
+    expect(validate.firstCall.args.length).to.be.equal(3)
+  })
+})
+
 
 describe('validateQuery', () => {
   const rule = joi.object().keys({
