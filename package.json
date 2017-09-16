@@ -35,15 +35,19 @@
     "chai": "4.1.2",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
+    "ghooks": "2.0.0",
     "mocha": "3.5.3",
     "semantic-release": "^7.0.2",
     "sinon": "3.2.1",
     "sinon-chai": "2.13.0",
     "winston": "2.3.1"
-  }, 
+  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run test"
     }
   }
 }
