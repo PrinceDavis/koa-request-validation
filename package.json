@@ -4,9 +4,12 @@
   "description": "A simple, clean http requests validator for koajs application that is inspired by express validator and uses joi to make rules",
   "main": "src/index.js",
   "scripts": {
+    "check-coverage": "nyc check-coverage --lines 95 --functions 100",
     "commit": "git-cz",
     "test": "mocha **/*.spec.js",
     "test:watch": "mocha **/*.spec.js -w",
+    "cover": "nyc npm t",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov ./node_modules/.bin/codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -33,10 +36,12 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
+    "codecov": "2.3.0",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
     "ghooks": "2.0.0",
     "mocha": "3.5.3",
+    "nyc": "11.2.1",
     "semantic-release": "^7.0.2",
     "sinon": "3.2.1",
     "sinon-chai": "2.13.0",
@@ -47,7 +52,7 @@
       "path": "node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run cover && npm run check-coverage"
     }
   }
 }
