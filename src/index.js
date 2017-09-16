@@ -2,8 +2,8 @@
 const joi = require('joi')
 module.exports = () => {
   return async (ctx, next) => {
-    ctx.validateBody = validateBody
-    ctx.validateParams = validateParams
+    ctx.validateBody = validateBody.bind(null, ctx)
+    ctx.validateParams = validateParams.bind(null, ctx)
     await next()
   }
 }
