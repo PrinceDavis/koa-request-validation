@@ -10,8 +10,7 @@
     "test:watch": "mocha **/*.spec.js -w",
     "cover": "nyc npm t",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov ./node_modules/.bin/codecov",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "precommit": "npm run cover && npm run check-coverage"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
