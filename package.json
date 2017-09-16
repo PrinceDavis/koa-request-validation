@@ -1,7 +1,7 @@
 {
   "name": "koa-request-validation",
   "version": "1.0.0",
-  "description": "An easy to use  http requests validator for koajs application that is inspired by express validator",
+  "description": "A simple, clean validator for http requests in koajs application that is inspired by express validator and uses joi to make rules",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
