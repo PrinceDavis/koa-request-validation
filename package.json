@@ -1,0 +1,31 @@
+{
+  "name": "koa-request-validation",
+  "version": "1.0.0",
+  "description": "An easy to use  http requests validator for koajs application that is inspired by express validator",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrinceDavis/koa-request-validation.git"
+  },
+  "keywords": [
+    "koa",
+    "request",
+    "validation",
+    "koa",
+    "request",
+    "validator",
+    "koajs"
+  ],
+  "author": "Ossaija ThankGod <codebugsolved@gmail.com> (https://github.com/princedavis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PrinceDavis/koa-request-validation/issues"
+  },
+  "homepage": "https://github.com/PrinceDavis/koa-request-validation#readme",
+  "dependencies": {
+    "joi": "11.0.1"
+  }
+}
