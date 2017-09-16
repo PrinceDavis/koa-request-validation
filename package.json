@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
-    "test": "mocha **/*.spec.js -w",
+    "test": "mocha **/*.spec.js",
+    "test:watch": "mocha **/*.spec.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -40,7 +41,9 @@
     "sinon-chai": "2.13.0",
     "winston": "2.3.1"
   }, 
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }
