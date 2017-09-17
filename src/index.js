@@ -17,7 +17,7 @@ function validateParams (ctx, rule) {
   validate(ctx.params, rule)
 }
 
-function validateQuery(ctx, rule) {
+function validateQuery (ctx, rule) {
   validate(ctx.request.query, rule)
 }
 
