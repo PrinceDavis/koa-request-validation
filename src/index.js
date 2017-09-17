@@ -16,6 +16,13 @@ function validateParams (ctx, rule) {
   validate(ctx.params, rule)
 }
 
+<<<<<<< HEAD
+=======
+function validateQuery (ctx, rule) {
+  validate(ctx.request.query, rule)
+}
+
+>>>>>>> develop
 function validate (obj, rule) {
   const options = {
     abortEarly: false,
