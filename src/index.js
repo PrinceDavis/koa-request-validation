@@ -4,6 +4,7 @@ module.exports = () => {
   return async (ctx, next) => {
     ctx.validateBody = validateBody.bind(null, ctx)
     ctx.validateParams = validateParams.bind(null, ctx)
+    ctx.validateQuery = validateQuery.bind(null, ctx)
     await next()
   }
 }
@@ -16,13 +17,10 @@ function validateParams (ctx, rule) {
   validate(ctx.params, rule)
 }
 
-<<<<<<< HEAD
-=======
 function validateQuery (ctx, rule) {
   validate(ctx.request.query, rule)
 }
 
->>>>>>> develop
 function validate (obj, rule) {
   const options = {
     abortEarly: false,
