@@ -31,7 +31,7 @@ app.use(validator())
 ```
 ### Example
 ##### In your controllers/route handlers
-###### You can put this rules in a validation rules folder and require them where need to clean up your controllers/request handlers
+###### You can put these rules in a validation-rules folder and require them where need to clean up your controllers/request handlers
 ```javascript
 const Joi = require('joi');
 
