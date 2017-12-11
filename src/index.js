@@ -5,6 +5,7 @@ module.exports = () => {
     ctx.validateBody = validateBody.bind(null, ctx)
     ctx.validateParams = validateParams.bind(null, ctx)
     ctx.validateQuery = validateQuery.bind(null, ctx)
+    ctx.validateHeaders = validateHeaders.bind(null, ctx)
     await next()
   }
 }
@@ -19,6 +20,10 @@ function validateParams (ctx, rule) {
 
 function validateQuery (ctx, rule) {
   validate(ctx.request.query, rule)
+}
+
+function validateHeaders (ctx, rule) {
+  validate(ctx.request.headers, rule)
 }
 
 function validate (obj, rule) {
